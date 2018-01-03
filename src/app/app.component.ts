@@ -7,10 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nome: string = 'Wesley';
-  idade: number = 109;
+ 
 
-
-  getTextoCompleto(): string {
-    return `Olá, sou ${this.nome} e tenho ${this.idade} de idade`
+  alterarNome(input: any) {
+    // console.log(input);
+    this.nome = input.target.value;
   }
+
+
+  adicionar(){
+    console.log(`Adicionando ${this.nome}`);
+
+    // Math.random() * 100 -> numero inteiro até sem aleatório.
+    // Math.round(x) arredonda o numero.
+    const numero = Math.round(Math.random() * 100);
+
+    this.nome = `João ${numero}`;
+
+  }
+
 }

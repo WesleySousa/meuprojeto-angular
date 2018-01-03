@@ -1,4 +1,15 @@
+<div class="container">
+  <div class="alert alert-success" role="alert">
+    Funcionário adicionado: <strong> {{ nome }} </strong>
+  </div>
 
-<h1>Meu nome é {{ nome }}</h1>
-<h2>Minha idade é {{ idade - 87 }}</h2>
-<h3>Saudações: {{ getTextoCompleto() }}</h3>
+  <div class="form-group">
+    <label for="">Nome</label>
+    <input type="text" class="form-control" (input)="alterarNome($event)"
+      value="{{ nome }}">
+  </div>
+  
+  <!-- sintaxe sugar -> (click), outra forma é -> on-click -->
+  <button type="submit" class="btn btn-primary" (click)="adicionar()">Adicionar</button>
+
+</div>
