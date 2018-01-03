@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  nome: string = 'Wesley';
+  idade: number = 109;
+
+
+  getTextoCompleto(): string {
+    return `Olá, sou ${this.nome} e tenho ${this.idade} de idade`
+  }
 }
